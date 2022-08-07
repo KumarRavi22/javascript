@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>open/close any site</title>
+</head>
+<body>
+    <button id="open">open google</button>
+    <button id="close">CLOSE google</button>
+    <script>
+        let win;
+        let o=document.getElementById("open");
+
+        let x=document.getElementById("close");
+
+        o.addEventListener("click", ()=>{
+        win=window.open("http://www.google.com"," ","width=400", "height=400");
+        })
+
+        x.addEventListener("click",()=>{
+            win=window.close();
+        })
+    </script>
+</body>
+</html>
