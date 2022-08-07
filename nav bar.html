@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width  initial-scale=1.0">
+    <title>NAVIGATION BAR </title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        a.link{
+            color:red;
+            background-color: transparent;
+        }
+        div{
+            display:none;
+        }
+    ul{
+        list-style-type:none;
+        display: flex
+    }
+    ul li{
+        float:left;
+        padding:10px;
+        border: black;
+        width: 100%;
+        height: 36px;
+        border-radius: 2px;
+        background-color:aquamarine;
+        color: red;
+        font-weight: bold;
+
+    }
+    ul li ul li:hover{
+        background-color:skyblue;
+        color:black;
+    }
+    ul li:hover{
+        background-color:greenyellow;
+        border: 3px;
+        border-radius: 6px;
+        border-style:solid green;
+        color: black;
+        box-sizing:inherit;
+    }
+    ul li:hover ul{
+        display: block;
+    }
+    ul ul{
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="calculator.html"  target="_blank">HOME</a></li>
+        <li id="ser">SERVICES
+        <ul>
+            <li>SERVICES_1</li>
+            <li>SERVICES_2</li>
+        </ul>
+        </li> 
+        <li id="me"><a href="popup.html" target="_blank">MENU</a></li>
+        <li id="part">PARTNERS</li>
+        <li id="phone">CONTACT US</li>
+    </ul>
+    <br>
+    <h1 id="upt" style="margin: 20%"></h1>
+    <div id="p">
+        <img src="pic5.jpg" height="170" width="200">
+        <button id="b">close it</button>
+        <h1><i>this is a new webpage given as assignment</i></h1>
+    </div>
+        <script>
+            let h=document.getElementById("phone");
+            let l=document.getElementById("part");
+            let s=document.getElementById("ser");
+            let f=document.getElementById("me");
+            let p=document.getElementById("p");
+            let upt=document.getElementById("upt");
+            let i=document.getElementById("b");
+
+            h.addEventListener("click",()=>{
+            document.getElementById("upt").innerHTML=("contact us=9054746800");});
+            l.addEventListener("click",()=>{
+            document.getElementById("upt").innerHTML=("WE ARE IN PARTNERSHIP WITH-REL");});
+            s.addEventListener("click",()=>{
+            document.getElementById("upt").innerHTML=("servicess are available");});
+            s.addEventListener("mouseover",()=>{p.style.display="block";});
+            i.addEventListener("click",()=>{p.style.display="none";})
+        </script>
+</body>
+</html>
